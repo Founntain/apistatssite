@@ -1,0 +1,130 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>osu!player api statistics</title>
+    
+    <!-- Third Party Stylesheets -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Own Stylesheets-->
+    <link rel="stylesheet" href="styles/style.css" />
+    
+    <!-- Libraries -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Own Scripts -->
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="headerTitle">osu!player API statistics</div>
+    </div>
+    <div id="page" class="container-fluid page">
+        <div class="row halfPageSize">
+            <div class="col-md-4 align-self-center text-center">
+                <p class="frontStat">
+                    <a id="totalUsers" class="statHighlight">0</a><br />
+                    users
+                </p>
+            </div>
+            <div class="col-md-4 align-self-center text-center">
+                <p class="frontStat">
+                    <a id="totalSongs" class="statHighlight">0</a> </br>
+                    songs played
+                </p>
+            </div>
+            <div class="col-md-4 align-self-center text-center">
+                <p class="frontStat">
+                    <a id="totalXp" class="statHighlight">0</a><br/>
+                    XP earned
+                </p>
+            </div>
+        </div>
+
+        <div class="row halfPageSize">
+            <div class="col-md-4 align-self-center text-center">
+                <p class="frontStat">
+                    <a id="totalTranslators" class="statHighlight">0</a><br />
+                    translators
+                </p>
+            </div>
+            <div class="col-md-4 align-self-center text-center">
+                <p class="frontStat">
+                    <a id="communityLevel" class="statHighlight">0</a> </br>
+                    <a title="Community level">comm. level</a>
+                </p>
+            </div>
+            <div class="col-md-4 align-self-center text-center">
+                <p class="frontStat">
+                    <a id="xpForNextCommuntityLevel" class="statHighlight">0</a><br/>
+                    XP left
+                </p>
+            </div>
+        </div>
+
+        <hr>
+        
+        <div class="titleContainer">Newest registered user</div>
+
+        <div class="profileContainerOdd"> 
+            <div class="row">
+                <div class="col-md-3 center-block text-center">
+                    <img id="newestUserImage" class="profilePicture" src="https://server.founntain.de/api/Users/ProfilePictures/default_profile_picture.png"/>
+                </div>
+                <div class="col-md-9">
+                    <div class="profileInfoContainer">
+                        <h1 id="newestUserName">loading profile...</h1>
+                        <h2 id="newestUserJoinDate"></h2>
+                        
+                        <!-- <canvas id="newestUserXpCanvas" class="xpPieChart"></canvas> -->
+                    </div>
+                    
+                    <div class="row profileDescriptionContainer">
+                        <p id="newestUserDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="fullWithContainer chartContainer">
+                <span id="activityTitle"></span>
+                <canvas id="activityCanvas"></canvas>
+            </div>
+        </div>
+
+        <br />
+        <hr>
+
+        <div class="row">
+            <div class="fullWithContainer chartContainer">
+                <span id="registeredUsersTitle"></span>
+                <canvas id="registeredUserCanvas"></canvas>
+            </div>            
+        </div>
+
+        <br />
+        <hr>
+
+        <div class="row">
+            <div class="centeredFullWithContainer">
+                <p>Awesome translations created by these kind of people</p>
+                <table id="languageTable" class="languageTable">
+                    <tr>
+                        <th>Language</th>
+                        <th>Username</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <br />
+        <hr>
+    </div>
+</body>
+</html>
