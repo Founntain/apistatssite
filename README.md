@@ -1,3 +1,5 @@
+# This side is old and was replaced by a new one
+
 #### osu!player plus stats side
 Install dependencies with: *npm install*
 
